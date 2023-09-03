@@ -1,15 +1,12 @@
 <template>
-  <h1>{{ message }}</h1>
+  <h1>Bikes</h1>
+  <bike-item/>
+  <bike-item/>
+  <bike-item/>
 </template>
 
-<script>
-  export default {
-    data() {
-      return{
-        message: 'This is some text'
-      }
-    }
-  }
-</script>
+<script></script>
 
-<style></style> 
+<style>
+
+</style> 
