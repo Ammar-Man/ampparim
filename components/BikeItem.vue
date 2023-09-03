@@ -1,22 +1,18 @@
 <template>
-    <div class="bike-item">
-        <div class="side">  <img :src="bikeImg " alt="Bike Image" ></div>
-      
-<div class="main">
-    <h2>{{ bikeName }}</h2>
-    <p>Kunto: {{ bikeCondition }}</p>
-    <p>Hinta: <b>{{ bikePrice }} </b></p>
-    <p>{{ bikeDate }}</p>
-    
-    <p>{{ createdAt }}</p>
-    <p>Lisätiedot  {{ moreInfo }}</p>
-    <p>id: {{ _id }}</p>
+    <div>
+        <h2>{{ bikeName }}</h2>
+        <img :src=bikeImg alt="" >
+        <p>Kunto: {{ bikeCondition }}</p>
+        <p>Hinta: <b>{{ bikePrice }} </b></p>
+        <p>{{ bikeDate }}</p>
+        <p>{{ createdAt }}</p>
+        <p>Lisätiedot :  {{ moreInfo }}</p>
+        <p>id: {{ _id }}</p>
 </div>
 
-</div>
 
 </template>
-
+<!-- https://www.w3schools.com/vue/img_quality.svg -->
 <script>
 function formatDate(inputDateString) {
   // Parse the input date string into a Date object
@@ -41,51 +37,21 @@ console.log(formattedDate); // Output: "2023-07-13"
 
 
 export default {
-    props:["bikeName","bikeCondition","bikePrice","bikeDate","bikeDate","createdAt","moreInfo","_id"],
+    props:["bikeName","bikeImg","bikeCondition","bikePrice","bikeDate","bikeDate","createdAt","moreInfo","_id","isFavorite"],
     data() {
         return {
-            
-       
+         
         }
+    },
+    methods: {
+       
     }
 };
 </script>
 
 <style>
-.bike-item {
-  display: flex; 
-  align-items: center; 
-  color: #8a6d3b;
-    background-color: #fcf8e3;
-    border-color: #faebcc;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-.side {
-  flex: 10%;
-  padding: 20px;
-}
-
-/* Main column */
-.main {
-  flex: 70%;
-}
-
-
-img {
-  width: 200px;
-  height: 150px;
-  padding: 4px;
-    line-height: 1.42857143;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
+img{
+    width: 200px;
+    height: 150px;
 }
 </style>  

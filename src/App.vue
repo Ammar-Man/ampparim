@@ -6,29 +6,22 @@
   <h1>Bikes</h1>
 
  
-  
-  <bike-item
-  
-  :bikeName="fa"
-  />
+  <div id="wrapper">
+
 
   <bike-item
 
     v-for="x in apiData"
     :bikeName="x.bikeName"
+    :bikeImg="x.bikeImg"
     :bikeCondition="x.bikeCondition"
     :bikePrice="x.bikePrice"
     :moreInfo="x.moreInfo"
     :bikeDate="x.createdAt"
-    :_id="x._id"/>
+    :_id="x._id" />
+</div>
 
-  
 
-
-  <h1>API Data:</h1>
-    <ul>
-      <li v-for="item in apiData" :key="item.id">{{ item.bikeName }}</li>
-    </ul>
   </div>
 </template>
 
@@ -57,9 +50,31 @@ export default {
       });
   },
 };
+async function getAllBikes() {
+    const resp = await fetch(API_URL + '/bikes', {
+        method: "GET"
+    });
+
+    if (resp.status > 201) { return showLoging(); }
+
+    const notes = await resp.json();
+    console.log("old",notes);}
+    getAllBikes()
+
+
 
 </script>
 
 <style>
-
+ #wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #wrapper > div {
+    border: dashed black 1px;
+    flex-basis: 200px;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightgreen;
+  }
 </style> 
