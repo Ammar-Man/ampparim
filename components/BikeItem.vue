@@ -7,7 +7,7 @@
     <p>Kunto: {{ bikeCondition }}</p>
     <p>Hinta: <b>{{ bikePrice }} </b></p>
     <p>{{ bikeDate }}</p>
-
+    
     <p>{{ createdAt }}</p>
     <p>Lisätiedot  {{ moreInfo }}</p>
     <p>id: {{ _id }}</p>
@@ -41,17 +41,11 @@ console.log(formattedDate); // Output: "2023-07-13"
 
 
 export default {
+    props:["bikeName","bikeCondition","bikePrice","bikeDate","bikeDate","createdAt","moreInfo","_id"],
     data() {
         return {
-            name: 'Apples',
-            bikeCondition: 'Hyvä',
-            bikeDate: '',
-            bikeImg: 'https://images.tori.fi/api/v1/imagestori/images/4971449856.jpg?rule=medium_660',
-            bikeName: 'Trek Roscoe 8 XL maastopyörä',
-            bikePrice: '990',
-            createdAt: formatDate('2023-07-13T10:52:10.048Z'),
-            moreInfo: 'Myynnissä hyväkuntoinen trek roscoe 8 vm.2019. Runkokoko XL',
-            _id: '132112'
+            
+       
         }
     }
 };
