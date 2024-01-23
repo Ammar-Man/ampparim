@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+</head>
+<body>
+    <h1>Edit Item</h1>
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{ item_info.Name }}" required><br>
+        <label for="size">Size:</label>
+        <input type="text" name="size" value="{{ item_info.Size }}" required><br>
+        <label for="address">Address:</label>
+        <input type="text" name="address" value="{{ item_info.Address }}" required><br>
+        <label for="custom">Custom Information:</label>
+        <input type="text" name="custom" value="{{ item_info.Custom }}" required><br>
+        <label for="condition">Condition:</label>
+        <input type="text" name="condition" value="{{ item_info.Condition }}" required><br>
+        <input type="submit" value="Update Item">
+    </form>
+</body>
+</html>

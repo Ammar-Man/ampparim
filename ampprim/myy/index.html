@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+       
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .form-input {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #b4825b;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="reset"] {
+            background-color: #b4825b;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ampparim.fi</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img class="logo-image" src="../img/logo.webp" alt="Logo">
+            <a href="../" style="direction: none; color: white; font-size: x-large;">ampparim.fi</a>
+        </div>
+        <div class="topnav" id="myTopnav">
+
+            <a href="#home">koti</a>
+            <a href="../tuotteet/">tuotteet</a>
+            <a href="#myy" class="active">myy</a>
+            <a href="../about/">yhteystiedot</a>
+            <a href="../card/">ostoskori</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h1>Myy</h1>
+        <p>"Anna tarpeettomille huonekaluillesi ja pyörillesi uusi mahdollisuus elämässä. Tehdään yhdessä vaikutus
+            ympäristöön ja lompakkoon – kierrätä ". Me huollamme ja puhdistamme tuotteet asianmukaisesti seuraavaan ja
+            kestävään käyttöön. Olemme yhteydessä viimeistään 3 arkipäivän sisällä yhteydenotostasi 10-20 välisenä
+            aikana. Voit olla yhteydessä alla olevan lomakkeen avulla, jolloin olemme sinuun erikseen yhteydessä tai
+            lähettää viestin Whatsapp-sovelluksen kautta vähintään 3 kuvan kanssa myytävästä tavarasta. Muistathan
+            laittaa selkeän otsikon ja nimesi sekä kuvaustekstin kierrätettävästä tavarasta.</p>
+
+        <form action="your_form_processing_script.php" method="post">
+            <div class="form-input form-group cf wnd-form-field wnd-required">
+                <label>Select all that apply</label>
+
+                <div class="form-group-content">
+                    <div class="form-input form-checkbox">
+                        <input name="products[]" value="Bicycles" id="bicycles" type="checkbox" class="not-empty">
+                        <label for="bicycles">Bicycles</label>
+                    </div>
+
+                    <div class="form-input form-checkbox">
+                        <input name="products[]" value="Sofas" id="sofas" type="checkbox" class="not-empty">
+                        <label for="sofas">Sofas</label>
+                    </div>
+
+                    <div class="form-input form-checkbox">
+                        <input name="products[]" value="Chairs" id="chairs" type="checkbox" class="not-empty">
+                        <label for="chairs">Chairs</label>
+                    </div>
+
+                    <div class="form-input form-checkbox">
+                        <input name="products[]" value="Tables" id="tables" type="checkbox" class="not-empty">
+                        <label for="tables">Tables</label>
+                    </div>
+
+                    <div class="form-input form-checkbox">
+                        <input name="products[]" value="Other" id="other" type="checkbox" class="not-empty">
+                        <label for="other">Other interior design and furniture</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-input form-textarea cf wnd-form-field wnd-required">
+                <label for="productDescription">Description of the product for sale</label>
+                <textarea rows="4" id="productDescription" name="productDescription" required=""></textarea>
+            </div>
+
+            <div class="form-input form-tel watch-change cf wnd-form-field wnd-required">
+                <label for="phoneNumber">Telephone number</label>
+                <input id="phoneNumber" name="phoneNumber" required="" value="" type="tel" pattern="[\.\+\-\(\)0-9 ]+">
+            </div>
+
+            <div class="form-input form-email watch-change cf wnd-form-field wnd-required">
+                <label for="email">E-mail</label>
+                <input spellcheck="false" id="email" name="email" required="" value="@" type="email" maxlength="255">
+            </div>
+
+            <button type="submit">SEND</button>
+            <button type="reset">Clear</button>
+        </form>
+    </div>
+
+    <script src="../javascript.js"></script>
+</body>
+
+</html>
