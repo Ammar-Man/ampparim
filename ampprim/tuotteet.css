@@ -1,0 +1,95 @@
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* background-color: #b4825b; */
+  }
+  
+  .flex-container > div {
+    background-color: white;
+    width: 50%;
+    /* margin: 10px; */
+    /* text-align: center; */
+    /* line-height: 75px; */
+    font-size: 30px;
+  }
+
+  .flex-container > .img3 {
+    background-color: white;
+    width: 33%;
+    /* margin: 10px; */
+    text-align: center;
+    /* line-height: 75px; */
+    font-size: 30px;
+  }
+  
+
+
+  @media screen and (max-width: 600px) {
+    .flex-container{
+        display: block;
+        
+    }
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+
+    .flex-container > div {
+      background-color: white;
+      width: 100%;
+      /* margin: 10px; */
+      /* text-align: center; */
+      /* line-height: 75px; */
+      font-size: 30px;
+    }
+
+
+    .flex-container > .img3 {
+      background-color: white;
+      width: 99%;
+      /* margin: 10px; */
+      text-align: center;
+      /* line-height: 75px; */
+      font-size: 30px;
+    }
+  }
+  
+
+
+/* class="image-container" */
+
+  .image-container {
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+    /* Adjust as needed */
+}
+
+
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px; /* Adjust the gap as needed */
+  padding: 0 10%;
+}
+
+.image-container div {
+  text-align: center;
+}
+
+.image-container img {
+  border-radius: 10px;
+  width: 100%; /* Make images fill the container width */
+  max-width: 100%; /* Ensure images don't exceed their original size */
+  /* min-height: 80%; */
+  height: 70%; /* Maintain aspect ratio */
+  max-height: 260px;
+  
+  
+}
+
+.image-container img:hover {
+  padding: 5px;
+}
